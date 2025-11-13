@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { yekan } from '@/utils/font';
 import "./globals.css";
+import Layout from "@/components/layout/Layout";
 
 
 
@@ -15,11 +16,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fa" dir="rtl">
       <body
-        
+        className={`${yekan.variable}`}
       >
+        <Layout>
+
         {children}
+        </Layout>
       </body>
     </html>
   );

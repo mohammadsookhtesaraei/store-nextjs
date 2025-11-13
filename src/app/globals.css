@@ -1,2 +1,17 @@
 @import "tailwindcss";
 
+
+:root {
+    --bg-body:oklch(98.5% 0.001 106.423);
+}
+
+@theme {
+    --font-sans:var(--font-yekan);
+}
+
+
+
+body {
+    font-family: var(--font-yekan), sans-serif;
+    background-color: var(--bg-body);
+}
