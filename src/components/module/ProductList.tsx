@@ -8,7 +8,7 @@ interface ProductListProps {
 
 const ProductList = ({ data }: ProductListProps) => {
   return (
-    <div className="w-full mx-auto bg-gray-300 p-4 rounded-md">
+    <div className="w-full mx-auto bg-gray-300 p-4 rounded-md mb-8">
       <h2 className="text-center font-semibold text-2xl text-gray-600 mb-1.5">
         مشاهده محصولات
       </h2>
