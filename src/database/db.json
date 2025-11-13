@@ -2,49 +2,49 @@
   "products": [
     {
       "id": 1,
-      "title": "apple watch",
+      "title": "اپل واچ",
       "description": "  اپل واچ سری  سه",
       "img": "/images/apple-watch-7.png",
       "price": 3000000
     },
     {
       "id": 2,
-      "title": "iphone 13",
+      "title": "ایفون 13",
       "description": "ایفون 13",
       "img": "/images/iphone-13.png",
       "price": 45000000
     },
     {
       "id": 3,
-      "title": "iphone 17",
+      "title": "ایفون 17",
       "description": "ایفون 17",
       "img": "/images/iphone-17.jpg",
       "price": 170000000
     },
     {
       "id": 4,
-      "title": "xiaomi 17",
+      "title": "شیایومی 17",
       "description": "شیایومی 17",
       "img": "/images/xiamoi-17.jpg",
       "price": 110000000
     },
     {
       "id": 5,
-      "title": "s24 ultra",
+      "title": "اس 24 الترا",
       "description": " اس 24 الترا",
       "img": "/images/s24-ultra.jpg",
       "price": 150000000
     },
     {
       "id": 6,
-      "title": "mackbook pro",
+      "title": "مک بوک پرو",
       "description": " مک بوک پرو",
       "img": "/images/macbookpro.jpg",
       "price": 240000000
     },
     {
       "id": 7,
-      "title": "hdd",
+      "title": "هارد اکسترنال",
       "description": "هارد اکسترنال",
       "img": "/images/hdd.webp",
       "price": 5000000
