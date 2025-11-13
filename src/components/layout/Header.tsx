@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 const links = [
   { name: "خانه", href: "/" },
@@ -11,13 +12,14 @@ const links = [
 
 const Header = () => {
   const pathName = usePathname();
+  const [isOpen,setIsOpen]=useState(false);
 
   return (
-    <div>
-      <nav className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
+    <div className="relative">
+      <nav className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto ">
         <div className="flex items-center border-b border-b-gray-200 h-16 mb-8">
           {/* hamburger */}
-          <button className=" lg:hidden">
+          <button onClick={()=>setIsOpen((prev)=>!prev)} className=" lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -33,6 +35,56 @@ const Header = () => {
               />
             </svg>
           </button>
+
+          {/* sidebar */}
+          <div className={isOpen ? "lg:hidden rounded-bl-md pb-2 bg-gray-200 w-60 transition-all duration-200 absolute top-0 right-0 border border-gray-200":"absolute top-0 -right-full"}>
+          <div className="text-left p-2">
+             <button onClick={()=>setIsOpen((prev)=>!prev)}>
+            <span className="text-lg text-gray-700 hover:text-gray-800">x</span>
+           </button>
+           
+          </div>
+            <div className="block lg:hidden">
+            <ul className="ms-4 mb-2.5 flex flex-col gap-y-2.5">
+              {links.map((link) => {
+                const isActive =
+                  pathName === link.href ||
+                  (pathName.startsWith(link.href) && link.href !== "/");
+                return (
+                  <li key={link.name}>
+                    <Link
+                      className={isActive ? "text-gray-800 text-sm font-medium" : "text-gray-500 text-sm font-medium"}
+                      href={link.href}
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+          <hr className="bg-gray-600 mb-2.5" />
+            <div className="ms-4 flex flex-col lg:hidden">
+            <Link className="text-sm  font-medium text-gray-700 hover:text-gray-800" href={"/login"}>
+            ورود
+            </Link>
+           
+            <Link className="text-sm font-medium text-gray-700  hover:text-gray-800" href={"/register"}>
+            ثبت نام
+            </Link>
+          </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
           {/* main */}
           <div className="hidden lg:block">
             <ul className="ms-4 flex gap-x-8">
