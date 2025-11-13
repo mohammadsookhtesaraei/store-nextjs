@@ -1,9 +1,7 @@
-
+import HomePage from "@/components/templates/HomePage";
 
 const Store = () => {
-  return (
-    <div>Store</div>
-  )
-}
+  return <HomePage />;
+};
 
-export default Store
+export default Store;

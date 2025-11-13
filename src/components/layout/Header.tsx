@@ -37,7 +37,7 @@ const Header = () => {
           </button>
 
           {/* sidebar */}
-          <div className={isOpen ? "lg:hidden rounded-bl-md pb-2 bg-gray-200 w-60 transition-all duration-200 absolute top-0 right-0 border border-gray-200":"absolute top-0 -right-full"}>
+          <div className={isOpen ? "lg:hidden z-10 rounded-bl-md pb-2 bg-gray-200 w-60 transition-all duration-200 absolute top-0 right-0 border border-gray-200":"absolute top-0 -right-full"}>
           <div className="text-left p-2">
              <button onClick={()=>setIsOpen((prev)=>!prev)}>
             <span className="text-lg text-gray-700 hover:text-gray-800">x</span>
