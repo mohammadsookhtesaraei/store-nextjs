@@ -18,6 +18,7 @@ const Header = () => {
 
   return (
     <div className="relative">
+   
       <nav className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto ">
         <div className="flex items-center border-b border-b-gray-200 h-16 mb-8">
           {/* hamburger */}
