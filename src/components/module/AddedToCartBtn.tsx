@@ -6,7 +6,7 @@ const AddedToCartBtn = ({id}:{
     id:string
 }) => {
 
-    const {cartItems,handleIncreaseProductQty,handleDecreaseProductQty,getProductQty}=useProduct()
+    const {handleIncreaseProductQty,handleDecreaseProductQty,getProductQty}=useProduct()
    
 
   return (

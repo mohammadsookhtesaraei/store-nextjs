@@ -1,8 +1,8 @@
 "use client"
 
-import { createContext, useContext, useState } from "react"
+import { createContext, useContext, useEffect, useState } from "react"
 
-interface CartItemsT {
+export interface CartItemsT {
     id:number;
     qty:number;
 };
@@ -28,7 +28,18 @@ const ProductsProvider = ({children}:{
 }) => {
     const [cartItems,setCartItems]=useState<CartItemsT[]>([]);
  
-     
+     useEffect(()=>{
+       const stored=localStorage.getItem('products');
+       if(stored){
+        setCartItems(JSON.parse(stored))
+       }
+     },[]);
+
+     useEffect(()=>{
+        localStorage.setItem('products',JSON.stringify(cartItems))
+     },[cartItems]);
+
+
    const handleIncreaseProductQty=(id:number)=>{
      setCartItems((prev)=>{
 
