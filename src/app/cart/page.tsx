@@ -63,9 +63,18 @@ const Cart = () => {
             <p className="text-white">OFF10</p>
           </div>
           <div>
-            {cartItems.map((item) => (
-              <CartList key={item.id} {...item} />
-            ))}
+            {!cartItems.length ? (
+              <p className="text-red-500 mb-8 ps-2 bg-red-200 w-6/12 rounded-md py-2">
+                {" "}
+                سفارشی ثبت نشده است
+              </p>
+            ) : (
+              <>
+                {cartItems.map((item) => (
+                  <CartList key={item.id} {...item} />
+                ))}
+              </>
+            )}
           </div>
           <div className="w-6/12 border border-gray-200 shadow-md p-2">
             <h2>قیمت کل:{totalPrice.toLocaleString("fa")}تومان</h2>
