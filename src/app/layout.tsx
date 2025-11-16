@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { yekan } from '@/utils/font';
 import "./globals.css";
 import Layout from "@/components/layout/Layout";
+import ProductsProvider from "@/context/ProductsProvider";
 
 
 
@@ -20,10 +21,11 @@ export default function RootLayout({
       <body
         className={`${yekan.variable}`}
       >
+        <ProductsProvider>
         <Layout>
-
         {children}
         </Layout>
+        </ProductsProvider>
       </body>
     </html>
   );
