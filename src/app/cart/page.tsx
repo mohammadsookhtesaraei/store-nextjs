@@ -40,6 +40,9 @@ const Cart = () => {
   }, 0);
 
   const submitHandler = async () => {
+    if(!discount){
+      return
+    };
     const result = await fetch(
       `http://localhost:3004/discounts?code=${discount}`
     );
