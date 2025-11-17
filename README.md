@@ -45,4 +45,4 @@ This ensures the cart never resets after page refresh.
 - Better performance and SEO  
 - Ideal for static or rarely-changing content  
 
-File:  
+
