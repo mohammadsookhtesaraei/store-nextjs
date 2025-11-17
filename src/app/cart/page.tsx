@@ -52,6 +52,7 @@ const Cart = () => {
     setDiscountPrice(discountPrice);
     let finalPrice = totalPrice - discountPrice;
     setFinalPrice(finalPrice);
+    setDiscount("");
   };
 
   return (
